@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>烟台大学|YanTaiUniversity</title>
+    <link rel="icon" href="img/yd.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            font-family: 宋体;
+        }
+
+        .cleanfix:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        #head {
+            height: 107px;
+            background-image: url("img/topBg.gif");
+        }
+
+        #topContent {
+            width: 1018px;
+            height: 107px;
+            margin: 0 auto;
+        }
+
+        #logo {
+            height: 100%;
+            width: 317px;
+            background-image: url("img/logo.jpg");
+            float: left;
+        }
+
+        #nav {
+            height: 100%;
+            width: 701px;
+            float: left;
+        }
+
+        #search {
+            height: 72px;
+            position: relative;
+        }
+
+        #search img {
+            float: right;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        #search > input[src="img/sous.png"] {
+            position: absolute;
+            right: 100px;
+            top: 1px;
+            border-left: 1px solid gray;
+        }
+
+        #search input {
+            height: 21px;
+            float: right;
+            margin-top: 26px;
+            margin-right: 60px;
+        }
+
+        #navList {
+            height: 35px;
+        }
+
+        #navList li {
+            list-style: none;
+            float: left;
+            /*height: 35px;如果不添加height的时候的效果不一样。*/
+            line-height: 35px;
+            text-align: center;
+            color: white;
+            width: 87.62px;
+
+        }
+
+        #navList .dropMenu {
+            width: 176px;
+            overflow: hidden; /*使用height从0到最高的时候要使用overflow！！！*/
+            height: 0;
+            /* display: none;第二个方法*/
+            transition: all 2s ease;
+        }
+
+        #navList > ul > li:hover {
+            background-color: white;
+        }
+
+        #navList > ul > li:hover .dropMenu {
+            background-color: gray;
+            /* display: block;*/
+            height: 110px;
+        }
+
+        #banner {
+            height: 390px;
+            background-image: url("img/jdt0.jpg");
+            background-size: 100% 100%;
+        }
+
+        #news {
+            width: 1018px;
+            height: 421px;
+            margin: 0 auto;
+
+        }
+
+        #news > div {
+            float: left;
+            border: 1px solid #b6b6b6;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        #area1, #area2, #area3 {
+            height: 273px;
+            margin-bottom: 12px;
+        }
+
+        #area4, #area5, #area6 {
+            height: 136px;
+        }
+
+        #area1, #area4 {
+            width: 393px;
+            margin-right: 12px;
+        }
+
+        #area2, #area5 {
+            width: 300px;
+            margin-right: 12px;
+
+        }
+
+        #area3, #area6 {
+            width: 301px;
+        }
+
+        .tabs {
+            height: 29px;
+            background-color: #dadada;
+        }
+
+        .leftTab, .rightTab {
+            width: 80px;
+            height: 22px;
+            background-color: #254B6C;
+            float: left;
+            margin-top: 7px;
+            color: white;
+            line-height: 22px;
+            text-align: center;
+        }
+
+        .rightTab {
+            background-color: #8c1616;
+        }
+
+        .more {
+            line-height: 29px;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .list li {
+            height: 34.7px;
+            line-height: 34.7px;
+            padding: 0 15px;
+            background: url("img/icon1.gif") no-repeat;
+            background-position: 7px 14px;
+        }
+
+        .list .time {
+            float: right;
+        }
+
+        .list .item {
+            float: left;
+            width: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; /*添加省略号*/
+        }
+
+        #area2_fa {
+            margin: 0 auto;
+            margin-top: 9px;
+            width: 285px;
+            height: 255px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #area2_fa_s1 {
+            width: 100%;
+            height: 224px;
+            background-image: url("img/area2.jpg");
+            background-size: 100% 100%;
+        }
+
+        #area2_fa_s2 {
+            width: 100%;
+            height: 25px;
+            background-color: #c2b1ae;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        #area4_ul {
+            width: 363px;
+            height: 106px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 15px;
+
+        }
+
+        #area4_ul li {
+            background-color: #b6b6b6;
+            width: 82px;
+            height: 27px;
+            word-break: normal;
+            text-align: center;
+            line-height: 27px;
+        }
+
+        #area5_fa {
+            width: 290px;
+            height: 126px;
+            margin: 0 auto;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #area5_fa_s1 {
+            width: 49%;
+            height: 100%;
+        }
+
+        #area5_fa_s2 {
+            width: 49%;
+            height: 100%;
+        }
+
+        #area5_fa_s1 > div:nth-child(1) {
+            background-image: url("img/baozhi.jpg");
+            background-size: 100% 100%;
+            width: 100%;
+            height: 98px;
+        }
+
+        #area5_fa_s1 > div:nth-child(2) {
+            background-color: #c2b1ae;
+            width: 100%;
+            height: 22px;
+            margin-top: 6px;
+            text-align: center;
+            line-height: 22px;
+        }
+
+        #area5_fa_s2 > div:nth-child(1) {
+            background-image: url("img/baozhi.jpg");
+            background-size: 100% 100%;
+            width: 100%;
+            height: 98px;
+        }
+
+        #area5_fa_s2 > div:nth-child(2) {
+            background-color: #c2b1ae;
+            width: 100%;
+            height: 22px;
+            margin-top: 6px;
+            text-align: center;
+            line-height: 22px;
+        }
+
+        #area6 table {
+            margin-top: 20px;
+        }
+
+        #area6 table tr td {
+            width: 60px;
+            height: 38px;
+            text-align: center;
+        }
+
+        #foot {
+            width: 1349px;
+            height: 164px;
+            background-color: #254B6C;
+            overflow: hidden;
+        }
+
+        #foot_fa {
+            width: 1018px;
+            height: 138px;
+            margin: 0 auto;
+            margin-top: 26px;
+        }
+
+        #foot_left {
+            float: left;
+            width: 290px;
+            height: 24px;
+
+        }
+
+        #foot_left > a:nth-child(1) {
+            width: 48px;
+            height: 24px;
+            color: white;
+            text-decoration: none;
+        }
+
+        #foot_left > a:nth-child(2) {
+            width: 42px;
+            height: 24px;
+            color: white;
+            text-decoration: none;
+        }
+
+        #foot_right {
+            float: left;
+            width: 440px;
+            height: 48px;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+        }
+
+        #foot img {
+            display: block;
+            clear: left;
+            margin: 0 auto;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<!--ctrl+鼠标左键，样式的快速跳转
+alt+方向左键返回操作历史的上一次操作。
+加右方向键是返回操作历史的下一次位置。-->
+
+
+<div id="head">
+
+    <div id="topContent">
+        <div id="logo"></div>
+        <div id="nav">
+            <div id="search">
+                <img src="img/w1.gif" alt="">
+                <img src="img/w3.gif" alt="">
+                <input type="text" placeholder="请输入关键词">
+                <input type="image" src="img/sous.png">
+            </div>
+            <div id="navList">
+                <ul>
+                    <li>烟大新闻</li>
+                    <li>
+                        学校概况
+                        <div class="dropMenu">
+                            <ul class="cleanfix">
+                                <li>学校简介</li>
+                                <li>学校简介</li>
+                                <li>学校简介</li>
+                                <li>学校简介</li>
+                                <li>学校简介</li>
+                                <li>学校简介</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>学院设置</li>
+                    <li>人才培养</li>
+                    <li>科学研究</li>
+                    <li>学生工作</li>
+                    <li>招生就业</li>
+                    <li>社团服务</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div id="body">
+    <div id="banner"></div>
+    <div id="news">
+        <!--div#area$*6快捷键-->
+        <div id="area1">
+            <div class="tabs">
+                <div class="leftTab">学校要闻</div>
+                <div class="rightTab">学院简讯</div>
+                <span class="more">more</span>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><p class="item">土木工程学院积极推程学院积程学院积程学院积进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li>
+                        <pn class="item">土木工程学院积极推进校企合作</pn>
+                        <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="area2">
+            <div id="area2_fa">
+                <div id="area2_fa_s1"></div>
+                <div id="area2_fa_s2">工商帝国大学万岁</div>
+            </div>
+        </div>
+        <div id="area3">
+            <div class="tabs">
+                <div class="leftTab">通知公告</div>
+                <div class="rightTab">学术动态</div>
+                <span class="more">more</span>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><p class="item">土木工程学院积极推程学院积程学院积程学院积进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                    <li>
+                        <pn class="item">土木工程学院积极推进校企合作</pn>
+                        <span class="time">08-01</span></li>
+                    <li><p class="item">土木工程学院积极推进校企合作</p> <span class="time">08-01</span></li>
+                </ul>
+            </div>
+        </div>
+        <div id="area4">
+            <ul id="area4_ul">
+                <li>数字媒体</li>
+                <li>办公系统</li>
+                <li>招标信息</li>
+                <li>人才招聘</li>
+                <li>数字媒体</li>
+                <li>办公系统</li>
+                <li>招标信息</li>
+                <li>人才招聘</li>
+                <li>数字媒体</li>
+                <li>办公系统</li>
+                <li>招标信息</li>
+                <li>人才招聘</li>
+            </ul>
+        </div>
+        <div id="area5">
+            <div id="area5_fa">
+                <div id="area5_fa_s1">
+                    <div></div>
+                    <div>专题链接</div>
+                </div>
+                <div id="area5_fa_s2">
+                    <div></div>
+                    <div>视频新闻</div>
+                </div>
+            </div>
+        </div>
+        <div id="area6">
+            <table>
+                <tr>
+                    <td>用户名</td>
+                    <td colspan="2"><input type="text"></td>
+                    <td>计费系统</td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td colspan="2"><input type="password"></td>
+                    <td>VPN说明</td>
+                </tr>
+                <tr>
+                    <td>系统</td>
+                    <td>
+                        <select name="system">
+                            <option>综合门户</option>
+                            <option value="1">aa</option>
+                            <option value="3">a</option>
+                            <option value="2">b</option>
+                        </select>
+                    </td>
+                    <td><input type="submit"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div id="foot">
+    <div id="foot_fa">
+        <div id="foot_left">
+            <a href="">网站地图</a>
+            <a href="">English</a>
+        </div>
+        <div id="foot_right">
+            校址：中国山东省烟台市莱山区清泉路30号&nbsp;&nbsp;邮编：264005&nbsp;&nbsp;
+            <a href="" style="text-decoration: none;color: white">管理员信箱</a>
+            <br>
+            鲁ICP备05002387号-3 <img src="img/ba.png" style="display: inline-block" alt="">
+            鲁公网安备 37061302000289号
+        </div>
+        <img src="img/blue.png" alt="">
+    </div>
+</div>
+
+
+</body>
+</html>
