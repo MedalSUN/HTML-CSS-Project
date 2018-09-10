@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聚焦宾之郎</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #ddd {
+            width: 100%;
+            height: 700px;
+            background-color: gainsboro;
+        }
+
+        #section_three {
+            width: 100%;
+            height: 600px;
+            padding-bottom: 100px;
+        }
+
+        #section_three_center {
+            width: 90%;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #section_three_center_first {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            top:150px;
+        }
+
+        .section_title {
+            margin-top: 38px;
+            text-align: center;
+            font-size: 33px;
+        }
+
+        .section_title_bottom {
+            display: block;
+            width: 100px;
+            height: 5px;
+            margin: 20px auto;
+            background-color: #ea0d5e;
+        }
+
+        #section_des {
+            width: 100%;
+            text-align: center;
+        }
+
+        #section_three_center_second {
+            width: 100%;
+            height: 75%;
+            box-sizing: border-box;
+            padding-top: 5%;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 0;
+        }
+
+        #three_left {
+            width: 38%;
+            height: 100%;
+            position: absolute;
+            left:-300px;
+        }
+
+        #three_right {
+            width: 58%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            right:-500px;
+        }
+
+        .three_right_content {
+            width: 100%;
+            height: 32%;
+            box-sizing: border-box;
+            background-color: #ECECEC;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+        }
+
+        .li_left {
+            width: 20%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-right: 30px;
+            padding-top: 10px;
+        }
+
+        .li_left span {
+            display: block;
+            text-align: right;
+            color: gainsboro;
+        }
+
+        .li_left p {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: right;
+            color: gainsboro;
+        }
+
+        .li_right {
+            width: 80%;
+            height: 100%;
+
+        }
+
+        .li_right h3 {
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        #left_img_con {
+            width: 100%;
+            height: 80%;
+            background-color: black;
+            transition: all 2s ease;
+            overflow: hidden;
+        }
+
+        /*注意：*/
+        #left_img_con img {
+            width: 100%;
+            height: 100%;
+            transition: all 2s ease;
+        }
+        #left_img_con:hover img{
+            transform: scale(1.2);
+        }
+
+
+
+
+
+
+
+        #left_img_des {
+            width: 40%;
+            height: 35%;
+            background-color: #D4444B;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-top: 10px;
+            opacity: 0.8;
+        }
+
+        #left_img_des > div:first-child {
+            font-size: 18px;
+            color: gainsboro;
+            margin-bottom: 15px;
+        }
+
+        #left_img_des > div:nth-child(2) {
+            font-size: 20px;
+            color: gainsboro;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="ddd"></div>
+
+<div id="section_three">
+    <div id="section_three_center">
+        <div id="section_three_center_first">
+            <h3 class="section_title">聚焦宾之郎</h3>
+            <div class="section_title_bottom"></div>
+            <p id="section_des">
+                “敢于否定，勇于创新；善听善改，乐于取舍，成于归零”的企业精神、“乐分享·心无间”的企业风格。
+            </p>
+        </div>
+
+        <div id="section_three_center_second">
+            <div id="three_left">
+                <div id="left_img_con">
+                    <img src="http://www.binzhilang.com.cn/upload/images/2018/08/29/58ed8ec8cb2b4f09892014f8d0b0ad2e.jpg"
+                         alt="">
+                </div>
+                <div id="left_img_des">
+                    <div>2018-09-01</div>
+                    <div>【爱在金秋，情满宾之郎】2018年“宾之...</div>
+                </div>
+            </div>
+
+            <div id="three_right">
+                <li class="three_right_content">
+                    <div class="li_left">
+                        <span>2018</span>
+                        <p class="li_left_p">07-07</p>
+                    </div>
+                    <div class="li_right">
+                        <h3>同享精彩体育 共建活力商会丨热烈祝贺湘潭市浙... </h3>
+                        <p>
+                            “同享精彩体育，共建活力商会！” 5月10日上午9:00，湘潭市浙江商会“宾之郎...
+                        </p>
+                    </div>
+                </li>
+                <li class="three_right_content">
+                    <div class="li_left">
+                        <span>2018</span>
+                        <p class="li_left_p">08-02</p>
+                    </div>
+                    <div class="li_right">
+                        <h3>宾之郎2018首期“飞鹰”中层骨干培训班顺利... </h3>
+                        <p>
+                            对于中层骨干而言，职业能力不仅关乎个人发展，也决定着中层骨干在企业中存在的价值，是否...
+                        </p>
+                    </div>
+                </li>
+                <li class="three_right_content">
+                    <div class="li_left">
+                        <span>2018</span>
+                        <p class="li_left_p">08-16</p>
+                    </div>
+                    <div class="li_right">
+                        <h3>五四青年节丨宾之郎与在潭学子的青春约会 </h3>
+                        <p>
+                            ﻿青年节的宾之郎 为纪念五四运动99周年，进一步推进校企人才对接，助推湘潭经济发展。5...
+                        </p>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div style="width: 100%; height: 300px; background-color: yellow"></div>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.4.1/jquery.js"></script>
+<script>
+
+
+    /*整体动画变化效果*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 300) {
+            $("#section_three_center_first").animate({top: 0, opacity: '1'}).fadeIn("slow");
+            //$("#section_two_eat").animate({top: 175, opacity: '1'}).fadeIn("60000");
+        }
+        if ($(this).scrollTop() >= 350) {
+            $("#three_left").animate({left:0, opacity: '1'}).fadeIn("slow");
+            $("#three_right").animate({right: 0, opacity: '1'}).fadeIn("slow");
+        }
+    });
+
+    /*鼠标移动变化效果*/
+    /*使用mouseover会出现事件捕获现象，已保存博客*/
+    $(".three_right_content").mouseenter(function(){
+        $(this).find("span").css({"color" : "#D4444B"});
+        $(this).find(".li_left_p").css({"color" : "#D4444B"});
+        $(this).find("h3").css({"font-weight" : "bold"});
+    });
+    $(".three_right_content").mouseleave(function(){
+        $(this).find("span").css({"color" : "black"});
+        $(this).find(".li_left_p").css({"color" : "black"});
+        $(this).find("h3").css({"font-weight" : "normal"});
+    });
+
+
+
+    /*图片的放大缩小效果
+    $("#left_img_con").mouseenter(function(){
+
+        $("#left_img_con").find("img").animate({width : "110%" , height : "110%"}).fadeIn("slow");
+        $("#left_img_con").css({overflow : "hidden"});
+    });
+    $("#left_img_con").mouseleave(function(){
+        $("#left_img_con").find("img").animate({width : "100%" , height : "100%"}).fadeIn("slow");
+        $("#left_img_con").css({overflow : "none"});
+    });*/
+
+
+</script>
+
+
+</html>
