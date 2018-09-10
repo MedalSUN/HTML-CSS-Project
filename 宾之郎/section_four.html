@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>底部背景图</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #section_four {
+            background-image: url("http://www.binzhilang.com.cn/resources/web/img/ibtm_bg_03.jpg");
+            width:100%;
+            height:535px;
+            position: relative;
+        }
+
+
+        #section_four_content{
+            width:30%;
+            height:90%;
+            box-sizing: border-box;
+            background-color: white;
+            opacity: 0.8;
+            position: absolute;
+            top:30px;
+            right:-30%;
+            padding: 50px 30px;
+        }
+
+        #content_one{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #content_two{
+            font-size: 25px;
+            font-weight: bold;
+            color: #c9151e;
+            margin: 25px 0px;
+        }
+        #line{
+            width: 15%;
+            height: 3px;
+            background-color: #D3AD5D;
+            margin: 20px 0px;
+        }
+        #section_four_content a{
+            display: block;
+            width: 40%;
+            height:30px;
+            line-height: 30px;
+            color: white;
+            background-color: #c9151e;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 15px;
+            margin: 20px 0px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div style="width: 100%; height: 800px;background-color: #E50014"></div>
+
+<div id="section_four">
+
+    <div id="section_four_content">
+        <div id="content_one">
+            工程技术研究中心
+        </div>
+        <div id="content_two">
+            生产标准化
+        </div>
+        <div id="line"></div>
+        <div id="content_three">
+            湖南宾之郎食品科技有限公司工程技术研究中心
+            是一个能够整合国内外科研成果，
+            研发开发高新技术产品，培养高级技术和管理人才，
+            传播和辐射最新技术信息的现代槟榔研究中心。
+        </div>
+        <a href="">查看详情</a>
+    </div>
+
+</div>
+
+<div style="width: 100%; height: 800px;background-color: #E50014"></div>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.4.1/jquery.js" ></script>
+<script>
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() >= 350) {
+            $("#section_four_content").animate({right: "150px"}).fadeIn("slow");
+        }
+    });
+
+</script>
+
+
+</html>
