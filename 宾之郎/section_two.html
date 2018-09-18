@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品味宾之郎</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #before {
+            width: 100%;
+            height: 600px;
+            background-color: #D3AD5D;
+        }
+
+        .section_title {
+            margin-top: 38px;
+            text-align: center;
+            font-size: 33px;
+        }
+
+        .section_title_bottom {
+            display: block;
+            width: 100px;
+            height: 5px;
+            margin: 20px auto;
+            background-color: #ea0d5e;
+        }
+
+        #section_two {
+            width: 100%;
+            background: url("../img/ipro_bg_18.jpg") no-repeat;
+        }
+
+        #section_two_center {
+            overflow: hidden;
+            width: 90%;
+            height: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #section_two_top {
+            position: absolute;
+            top: 200px;
+            right: 35%;
+            width: 30%;
+
+        }
+
+        #section_two_des {
+            width: 100%;
+            height: 40px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #section_two_des a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: block;
+            width: 30%;
+            height: 100%;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid yellow;
+            border-radius: 20px;
+        }
+
+        #section_two_eat {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 30px;
+            position: absolute;
+            top: 400px;
+
+        }
+
+        #section_two_eat > div {
+            width: 32%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img_con {
+            width: 100%;
+            height: 50%;
+        }
+
+        .img_con img {
+            width: 100%;
+            height: 100%;
+            transition: all 4s ease;
+        }
+
+        .img_con:hover img{
+            transform: scale(1.5);
+        }
+
+        .cover {
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            text-align: center;
+
+        }
+        .cover span{
+            display: block;
+            margin:0 auto;
+            margin-top: 25%;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        .img_con_des{
+            width: 100%;
+            height: 50%;
+            box-sizing: border-box;
+            background-color: gainsboro;
+            padding: 30px 50px;
+            z-index: 300;
+        }
+
+        .img_con_des h3 {
+            font-size: 30px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .img_con_des p {
+            text-align: center;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="before"></div>
+
+<div id="section_two">
+    <div id="section_two_center">
+        <div id="section_two_top">
+            <h3 class="section_title">品味宾之郎</h3>
+            <div class="section_title_bottom"></div>
+            <div id="section_two_des">
+                <a href="">产品系列</a>
+                <a href="">新品热销</a>
+                <a href="">经典回顾</a>
+            </div>
+        </div>
+        <div id="section_two_eat">
+            <div>
+                <div class="img_con">
+                    <img src="../img/f3-lao.png" alt="">
+                </div>
+                <div class="cover">
+                    <span>立即购买</span>
+                    <img src="../img/66.png" alt="">
+                </div>
+                <div class="img_con_des">
+                    <h3>老湘潭系列</h3>
+                    <p>
+                        传统门店工艺，天然草本精华悉心调制而成，清新爽口，天然纯味。
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="img_con">
+                    <img src="../img/f3-wei.jpg" alt="">
+                </div>
+                <div class="cover">
+                    <span>立即购买</span>
+                    <img src="../img/66.png" alt="">
+                </div>
+                <div class="img_con_des">
+                    <h3>味中味系列</h3>
+                    <p>
+                        为味道工虽繁不省，为品质本虽贵不惜；味中有味，乐中有乐。
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="img_con">
+                    <img src="../img/f3-zhang.jpg  " alt="">
+                </div>
+                <div class="cover">
+                    <span>立即购买</span>
+                    <img src="../img/66.png" alt="">
+                </div>
+                <div class="img_con_des">
+                    <h3>张三丰系列</h3>
+                    <p>
+                        只有那些疯狂到为自己能够改变世界的人才能真正地改变世界。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.4.1/jquery.js"></script>
+
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 300) {
+            $("#section_two_top").animate({top: 0, opacity: '1'}).fadeIn("60000");
+            $("#section_two_eat").animate({top: 175, opacity: '1'}).fadeIn("60000");
+
+        }
+    });
+
+
+    $(".img_con").mouseenter(function(){
+        $(this).next(".cover").animate({top:0}).fadeIn("slow");
+    });
+   /* $(".img_con").mouseleave(function(){
+        $(this).next(".cover").animate({top:"50%"}).fadeIn("slow");
+    });*/
+
+
+
+</script>
+
+</html>
