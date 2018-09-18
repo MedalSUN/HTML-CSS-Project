@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/icon.png">
+    <title>用心做好每一口槟榔_湖南宾之郎食品公司</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            width: 100%;
+            height: 91px;
+            display: flex;
+        }
+
+        #header_right, #header_left {
+            display: inline-block;
+            width: 5%;
+            height: 100%;
+            background-color: #c9151e;
+        }
+
+        #header_right {
+            background-color: #E50014;
+        }
+
+        #header_img_left {
+            width: 15%;
+            height: 91px;
+        }
+
+        #header_img_right {
+            width: 3%;
+            height: 91px;
+        }
+
+        #header_ul_con {
+            width: 72%;
+            height: 91px;
+            box-sizing: border-box;
+            padding-right: 5px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #header_ul_con_left {
+            display: flex;
+            width: 80%;
+
+        }
+
+        #header_ul_con_left > li:not(:last-child) {
+            width: 12.5%;
+            height: 100%;
+            list-style: none;
+            background: no-repeat url("img/nav_bg_03.jpg") right center;
+        }
+
+        #header_ul_con_left > li:last-child {
+            width: 12.5%;
+            height: 100%;
+            list-style: none;
+        }
+
+        #header_ul_con_left > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 91px;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+
+        .drop {
+            list-style: none;
+            width: 200%;
+            border-top: 3px solid red;
+            opacity: 0.8;
+            display: none;
+        }
+
+        .drop li {
+            width: 100%;
+            height: 50px;
+            background-color: gainsboro;
+            border-bottom: 1px solid gray;
+        }
+
+        .drop li:last-child {
+            border-bottom: none;
+        }
+
+        .drop li a {
+            display: block;
+            box-sizing: border-box;
+            padding-left: 25px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #header_ul_con_right {
+            display: flex;
+            width: 19%;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header_ul_con_right > li {
+            list-style: none;
+            width: 22%;
+            height: 40px;
+            position: relative;
+        }
+
+        #header_ul_con_right > li span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #D3AD5D;
+            border-radius: 25px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #header_ul_con_right li:nth-child(1) span {
+            background-image: url("img/mileyelloy.png");
+        }
+
+        #header_ul_con_right li:nth-child(2) a span {
+            background-image: url("img/erweima.png");
+        }
+
+        #header_ul_con_right_drop {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #D3AD5D;
+            text-align: center;
+            position: absolute;
+            left: -130%;
+            top: 60px;
+            display: none;
+        }
+
+        #header_ul_con_right_drop p {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #header_ul_con_right li:nth-child(3) span {
+            background-image: url("img/sousuo.png");
+        }
+
+        #header_ul_con_right li:nth-child(3) input {
+            position: absolute;
+            right: -2px;
+            top: 0px;
+            width: 550%;
+            height: 38px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        #header_ul_con_right li:nth-child(3) img {
+            display: block;
+            height: 40px;
+            background-color: #c9151e;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        #header_ul_con_right li:nth-child(4) span {
+            background-image: url("img/tell.png");
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #video_con {
+            display: none;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            z-index: -1;
+        }
+
+        video {
+            width: 102%;
+            transform: rotateX(60deg);
+            transform-origin: center top;
+            position: absolute;
+            left: -1%;
+        }
+
+        #section_one {
+            width: 100%;
+            height: 600px;
+            background-image: url("img/iheart_bg_03.png");
+            background-size: 100%;
+            background-position: -200px;
+            /* position: absolute;
+             top: 400px;====增加一个监听事件
+ */
+        }
+
+        #section_one_cntent {
+
+            width: 80%;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        .section_title {
+            text-align: center;
+            font-size: 33px;
+        }
+
+        .section_title_bottom {
+            display: block;
+            width: 100px;
+            height: 5px;
+            margin: 20px auto;
+            background-color: #c9151e;
+        }
+
+        .section_title_des {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #section_one_content_img {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 2000px;
+        }
+
+        #section_one_content_img > div {
+            width: 33%;
+            heght: 100%
+        }
+
+        #d1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #d2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #d2 > div {
+            width: 100%;
+            height: 48%;
+        }
+
+        #d2 > div img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #d3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #d3 > div {
+            width: 100%;
+            height: 48%;
+        }
+
+        #d3 > div img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cover_fa {
+            position: relative;
+        }
+
+        .cover_img {
+            width: 100%;
+            height: 100%;
+            line-height: 1.9;
+            background-image: url("img/black.6.png");
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        .cover_img span {
+            display: block;
+            line-height: 1.9;
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            margin-left: 35%;
+
+        }
+
+        #section_title2 {
+            margin-top: 38px;
+            text-align: center;
+            font-size: 33px;
+        }
+
+        .section_title_bottom {
+            display: block;
+            width: 100px;
+            height: 5px;
+            margin: 20px auto;
+            background-color: #ea0d5e;
+        }
+
+        #section_two {
+            position: absolute;
+            top: 1000px;
+            width: 100%;
+            background: url("img/ipro_bg_18.jpg") no-repeat;
+        }
+
+        #section_two_center {
+            overflow: hidden;
+            width: 90%;
+            height: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #section_two_top {
+            position: absolute;
+            top: 200px;
+            right: 35%;
+            width: 30%;
+
+        }
+
+        #section_two_des {
+            width: 100%;
+            height: 40px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #section_two_des a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: block;
+            width: 30%;
+            height: 100%;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid yellow;
+            border-radius: 20px;
+        }
+
+        #section_two_eat {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 30px;
+            position: absolute;
+            top: 400px;
+
+        }
+
+        #section_two_eat > div {
+            width: 32%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img_con {
+            width: 100%;
+            height: 50%;
+            position: relative;
+        }
+
+        .img_con img {
+            width: 100%;
+            height: 100%;
+            transition: all 4s ease;
+        }
+
+        .img_con:hover img {
+            transform: scale(1.3);
+        }
+
+        .cover {
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            text-align: center;
+            transition: all 3s ease;
+        }
+
+        .cover span {
+            display: block;
+            margin: 0 auto;
+            margin-top: 25%;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        .img_con_des {
+            width: 100%;
+            height: 50%;
+            box-sizing: border-box;
+            background-color: gainsboro;
+            padding: 30px 50px;
+            z-index: 300;
+        }
+
+        .img_con_des h3 {
+            font-size: 30px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .img_con_des p {
+            text-align: center;
+        }
+
+        #section_three {
+            position: absolute;
+            top: 1750px;
+            width: 100%;
+            height: 720px;
+            padding-bottom: 100px;
+            overflow: hidden;
+        }
+
+        #section_three_center {
+            width: 90%;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        #section_three_center_first {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            top: 150px;
+        }
+
+        .section_title {
+            margin-top: 38px;
+            text-align: center;
+            font-size: 33px;
+        }
+
+        .section_title_bottom {
+            display: block;
+            width: 100px;
+            height: 5px;
+            margin: 20px auto;
+            background-color: #ea0d5e;
+        }
+
+        #section_des {
+            width: 100%;
+            text-align: center;
+        }
+
+        #section_three_center_second {
+            width: 100%;
+            height: 70%;
+            box-sizing: border-box;
+            padding-top: 5%;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 0;
+        }
+
+        #three_left {
+            width: 38%;
+            height: 100%;
+            position: absolute;
+            left: -300px;
+        }
+
+        #three_right {
+            width: 58%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            right: -500px;
+        }
+
+        .three_right_content {
+            width: 100%;
+            height: 32%;
+            box-sizing: border-box;
+            background-color: #ECECEC;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+        }
+
+        .li_left {
+            width: 20%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-right: 30px;
+            padding-top: 10px;
+        }
+
+        .li_left span {
+            display: block;
+            text-align: right;
+            color: gainsboro;
+        }
+
+        .li_left p {
+            font-size: 35px;
+            font-weight: bold;
+            text-align: right;
+            color: gainsboro;
+        }
+
+        .li_right {
+            width: 80%;
+            height: 100%;
+
+        }
+
+        .li_right h3 {
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        #left_img_con {
+            width: 100%;
+            height: 80%;
+            background-color: black;
+            transition: all 2s ease;
+            overflow: hidden;
+        }
+
+        /*注意：*/
+        #left_img_con img {
+            width: 100%;
+            height: 100%;
+            transition: all 2s ease;
+        }
+
+        #left_img_con:hover img {
+            transform: scale(1.2);
+        }
+
+        #left_img_des {
+            width: 40%;
+            height: 35%;
+            background-color: #D4444B;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-top: 10px;
+            opacity: 0.8;
+        }
+
+        #left_img_des > div:first-child {
+            font-size: 18px;
+            color: gainsboro;
+            margin-bottom: 15px;
+        }
+
+        #left_img_des > div:nth-child(2) {
+            font-size: 20px;
+            color: gainsboro;
+        }
+
+        #section_four {
+            position: absolute;
+            top: 2100px;
+            background-image: url("http://www.binzhilang.com.cn/resources/web/img/ibtm_bg_03.jpg");
+            width: 100%;
+            height: 535px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #section_four_content {
+            width: 30%;
+            height: 90%;
+            box-sizing: border-box;
+            background-color: white;
+            opacity: 0.8;
+            position: absolute;
+            top: 30px;
+            right: -30%;
+            padding: 50px 30px;
+        }
+
+        #content_one {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        #content_two {
+            font-size: 25px;
+            font-weight: bold;
+            color: #c9151e;
+            margin: 25px 0px;
+        }
+
+        #line {
+            width: 15%;
+            height: 3px;
+            background-color: #D3AD5D;
+            margin: 20px 0px;
+        }
+
+        #section_four_content a {
+            display: block;
+            width: 40%;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            background-color: #c9151e;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 15px;
+            margin: 20px 0px;
+        }
+
+        #section_five {
+            width: 100%;
+            height: 170px;
+            background-color: #c9151e;
+            position: absolute;
+            top: 3025px;
+            box-sizing: border-box;
+            padding: 25px 70px;
+        }
+
+        #section_five_center {
+            width: 100%;
+            height: 120px;
+            display: flex;
+        }
+
+        #section_five_center img {
+            width: 160px;
+            height: 100%;
+        }
+
+        #section_five_center_info {
+            height: 100%;
+            width: 470px;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-top: 35px;
+            margin-left: 30px;
+            color: white;
+        }
+
+        #section_five_center_share {
+            width: 650px;
+            height: 100%;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        #share_left {
+            display: flex;
+            align-items: center;
+            margin-right: 35px;
+        }
+
+        #share_left span {
+            color: white;
+        }
+
+        #share_left img {
+            width: 33px;
+            height: 33px;
+            margin-left: 10px;
+        }
+
+        #share_right {
+            display: flex;
+            align-items: center;
+        }
+
+        #share_right > span {
+            color: white;
+        }
+
+        #share_right img:nth-child(1) {
+            width: 120px;
+            height: 20px;
+        }
+
+        #share_right img:last-child {
+            width: 75px;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="header">
+    <span id="header_left"></span>
+    <img id="header_img_left" src="img/logo_02.png" alt="">
+    <div id="header_ul_con">
+        <ul id="header_ul_con_left">
+            <li>
+                <a href="#" style="color: red">首页</a>
+            </li>
+            <li>
+                <a href="#">走进宾之郎</a>
+                <ul class="drop">
+                    <li><a href="">企业文化</a></li>
+                    <li><a href="">装修精品</a></li>
+                    <li><a href="">什么槟榔</a></li>
+                    <li><a href="">吃什么菜</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">聚焦宾之郎</a>
+                <ul class="drop">
+                    <li><a href="">局设么叫</a></li>
+                    <li><a href="">居家宾之郎</a></li>
+                    <li><a href="">聚焦宾章</a></li>
+                    <li><a href="">宾之郎名</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">品味宾之郎</a>
+            </li>
+            <li>
+                <a href="#">加盟宾之郎</a>
+                <ul class="drop">
+                    <li><a href="">加盟什么</a></li>
+                    <li><a href="">聚焦宾章</a></li>
+                    <li><a href="">宾之郎名</a></li>
+                    <li><a href="">装修精品</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">采购招标</a>
+            </li>
+            <li>
+                <a href="#">人力资源</a>
+                <ul class="drop">
+                    <li><a href="">加盟什么</a></li>
+                    <li><a href="">聚焦宾章</a></li>
+                    <li><a href="">人力资源</a></li>
+                    <li><a href="">开元精心</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">联系我们</a>
+            </li>
+        </ul>
+        <ul id="header_ul_con_right">
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+                <div id="header_ul_con_right_drop">
+                    <img src="img/qr.jpg" alt="">
+                    <p>微信公众号</p>
+                </div>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+                <input type="text" value="请输入搜索的文本">
+                <img src="img/sousuowhite.png" alt="">
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <img id="header_img_right" src="img/head_bg.png" alt="">
+    <span id="header_right"></span>
+</div>
+
+
+<div id="container">
+
+    <div id="video_con">
+        <video width="100%" autoplay="autoplay" muted poster="img/video_cover.png" loop>
+            <source src="img/binzhiliang1.mp4" type="video/mp4">
+            <source src="img/binzhiliang1.ogg" type="video/ogg">
+            <source src="img/binzhiliang1.webm" type="video/webm">
+            您的浏览器不支持video标签
+        </video>
+    </div>
+
+    <div id="section_one">
+        <div id="section_one_cntent">
+            <h2 class="section_title">走进宾之郎</h2>
+            <span class="section_title_bottom"></span>
+            <p class="section_title_des">
+                湖南宾之郎食品科技有限公司位于湖南▪湘潭-九华经济技术开发区。
+                是目前槟榔食品行业唯一一家实现全自动工艺生产流水线的现代化
+                槟榔食品科技生产企业。
+            </p>
+            <div id="section_one_content_img">
+                <div id="d1" class="cover_fa"><!--div1-->
+                    <img src="img/f2-21.jpg" alt="">
+                    <div class="cover_img"><span>发展历程</span></div>
+                </div>
+                <div id="d2"><!--div2-->
+                    <div id="section_one_content_img_center_top" class="cover_fa">
+                        <img src="img/0b373cfdb3e64c13a9f0974d4eca6020.jpg" alt="">
+                        <div class="cover_img"><span>公司概况</span></div>
+                    </div>
+
+                    <div id="section_one_content_img_center_bottom" class="cover_fa">
+                        <img src="img/9a070470f3f740329228f7f1675177e2.jpg" alt="">
+                        <div class="cover_img"><span>企业文化</span></div>
+                    </div>
+                </div>
+                <div id="d3"><!--div3-->
+                    <div id="section_one_content_img_right_top" class="cover_fa">
+                        <img src="img/ae0d63505960476eb59817808cc97a84.jpg" alt="">
+                        <div class="cover_img"><span>印象宾之郎</span></div>
+                    </div>
+                    <div id="section_one_content_img_right_bottom" class="cover_fa">
+                        <img src="img/f1a37b83b9574edbb1d0f04e12075a7b.jpg" alt="">
+                        <div class="cover_img"><span>党建工作</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="section_two">
+        <div id="section_two_center">
+            <div id="section_two_top">
+                <h3 id="section_title2">品味宾之郎</h3>
+                <div class="section_title_bottom"></div>
+                <div id="section_two_des">
+                    <a href="">产品系列</a>
+                    <a href="">新品热销</a>
+                    <a href="">经典回顾</a>
+                </div>
+            </div>
+            <div id="section_two_eat">
+                <div>
+                    <div class="img_con">
+                        <img src="img/f3-lao.png" alt="">
+                    </div>
+                    <div class="cover">
+                        <span>立即购买</span>
+                        <img src="img/66.png" alt="">
+                    </div>
+                    <div class="img_con_des">
+                        <h3>老湘潭系列</h3>
+                        <p>
+                            传统门店工艺，天然草本精华悉心调制而成，清新爽口，天然纯味。
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="img_con">
+                        <img src="img/f3-wei.jpg" alt="">
+                    </div>
+                    <div class="cover">
+                        <span>立即购买</span>
+                        <img src="img/66.png" alt="">
+                    </div>
+                    <div class="img_con_des">
+                        <h3>味中味系列</h3>
+                        <p>
+                            为味道工虽繁不省，为品质本虽贵不惜；味中有味，乐中有乐。
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="img_con">
+                        <img src="img/f3-zhang.jpg  " alt="">
+                    </div>
+                    <div class="cover">
+                        <span>立即购买</span>
+                        <img src="img/66.png" alt="">
+                    </div>
+                    <div class="img_con_des">
+                        <h3>张三丰系列</h3>
+                        <p>
+                            只有那些疯狂到为自己能够改变世界的人才能真正地改变世界。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section_three">
+        <div id="section_three_center">
+            <div id="section_three_center_first">
+                <h3 class="section_title">聚焦宾之郎</h3>
+                <div class="section_title_bottom"></div>
+                <p id="section_des">
+                    “敢于否定，勇于创新；善听善改，乐于取舍，成于归零”的企业精神、“乐分享·心无间”的企业风格。
+                </p>
+            </div>
+            <div id="section_three_center_second">
+                <div id="three_left">
+                    <div id="left_img_con">
+                        <img src="http://www.binzhilang.com.cn/upload/images/2018/08/29/58ed8ec8cb2b4f09892014f8d0b0ad2e.jpg"
+                             alt="">
+                    </div>
+                    <div id="left_img_des">
+                        <div>2018-09-01</div>
+                        <div>【爱在金秋，情满宾之郎】2018年“宾之...</div>
+                    </div>
+                </div>
+
+                <div id="three_right">
+                    <li class="three_right_content">
+                        <div class="li_left">
+                            <span>2018</span>
+                            <p class="li_left_p">07-07</p>
+                        </div>
+                        <div class="li_right">
+                            <h3>同享精彩体育 共建活力商会丨热烈祝贺湘潭市浙... </h3>
+                            <p>
+                                “同享精彩体育，共建活力商会！” 5月10日上午9:00，湘潭市浙江商会“宾之郎...
+                            </p>
+                        </div>
+                    </li>
+                    <li class="three_right_content">
+                        <div class="li_left">
+                            <span>2018</span>
+                            <p class="li_left_p">08-02</p>
+                        </div>
+                        <div class="li_right">
+                            <h3>宾之郎2018首期“飞鹰”中层骨干培训班顺利... </h3>
+                            <p>
+                                对于中层骨干而言，职业能力不仅关乎个人发展，也决定着中层骨干在企业中存在的价值，是否...
+                            </p>
+                        </div>
+                    </li>
+                    <li class="three_right_content">
+                        <div class="li_left">
+                            <span>2018</span>
+                            <p class="li_left_p">08-16</p>
+                        </div>
+                        <div class="li_right">
+                            <h3>五四青年节丨宾之郎与在潭学子的青春约会 </h3>
+                            <p>
+                                ﻿青年节的宾之郎 为纪念五四运动99周年，进一步推进校企人才对接，助推湘潭经济发展。5...
+                            </p>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section_four">
+        <div id="section_four_content">
+            <div id="content_one">
+                工程技术研究中心
+            </div>
+            <div id="content_two">
+                生产标准化
+            </div>
+            <div id="line"></div>
+            <div id="content_three">
+                湖南宾之郎食品科技有限公司工程技术研究中心
+                是一个能够整合国内外科研成果，
+                研发开发高新技术产品，培养高级技术和管理人才，
+                传播和辐射最新技术信息的现代槟榔研究中心。
+            </div>
+            <a href="">查看详情</a>
+        </div>
+    </div>
+
+    <div id="section_five">
+        <div id="section_five_center">
+            <img src="img/51f79530d2b648a284bb6808dd18a1cc.png" alt="">
+            <div id="section_five_center_info">
+                <p>电话：400-829-9977</p>
+                <p>地址： 湖南省湘潭市九华经济开发区吉利西路30号</p>
+                <p>Copyright © 湖南宾之郎食品科技有限公司 版权所有 </p>
+            </div>
+            <div id="section_five_center_share">
+                <div id="share_left">
+                    <span>媒体互动: </span>
+                    <img src="img/weibo.png" alt="">
+                    <img src="img/weixin.png" alt="">
+                </div>
+                <div id="share_right">
+                    <span>宾之郎商城： </span>
+                    <img src="img/8dd5fc7efa144beba3985f73fbce3d18.png" alt="">
+                    <img src="img/6c4ec3f9629b472d9a7f9a7ebfcf4c81.png" alt="">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.4.1/jquery.js"></script>
+<script>
+
+
+    /*1:下拉菜单的实现；*/
+    $("#header_ul_con_left > li").hover(function () {
+        var drop = $(this).children();
+        $(drop[1]).slideDown("slow");
+        $(drop[0]).css({color: "red"});
+        //再添加一个改变颜色的类！！！
+    }, function () {
+        var drop = $(this).children();
+        $(drop[1]).slideUp("slow");
+        $(drop[0]).css({color: "black"});
+    });
+
+    /*2：当标题中的邮件被鼠标移动到时,邮件图标的变化*/
+    $("#header_ul_con_right li:nth-child(1) span").hover(function () {
+        $(this).css("background-image", "url('img/milewhite.png')");
+        $(this).css("background-color", "#c9151e");
+
+    }, function () {
+        $(this).css("background-image", "url('img/mileyelloy.png')");
+        $(this).css("background-color", "white");
+
+    });
+
+    /*3:当标题中的二维码被鼠标移动到时*/
+    $("#header_ul_con_right li:nth-child(2) span").hover(function () {
+        $(this).css("background-image", "url('img/erweimawhite.png')");
+        $(this).css("background-color", "#c9151e");
+        $("#header_ul_con_right_drop").slideDown("slow");
+    }, function () {
+        $(this).css("background-image", "url('img/erweima.png')");
+        $(this).css("background-color", "white");
+        $("#header_ul_con_right_drop").slideUp("slow");
+    });
+
+    /*4:当标题中的搜索被移动到时，搜索框的变化*/
+    $("#header_ul_con_right li:nth-child(3)").hover(function () {
+        var sons = $("#header_ul_con_right li:nth-child(3)").children();
+        $(sons[1]).css("display", "block");
+        $(sons[2]).css("display", "block");
+    }, function () {
+        var sons = $("#header_ul_con_right li:nth-child(3)").children();
+        $(sons[1]).css("display", "none");
+        $(sons[2]).css("display", "none");
+    });
+
+    /*5：当标题中的电话被鼠标移动到时，电话的变化*/
+    $("#header_ul_con_right li:nth-child(4) span").hover(function () {
+        $(this).css("background-image", "url('img/tellwhite.png')");
+        $(this).css("background-color", "#c9151e");
+    }, function () {
+        $(this).css("background-image", "url('img/tell.png')");
+        $(this).css("background-color", "white");
+    });
+
+
+    /*6:对视频添加监听，当加载完成之后设置display为block
+    * ====同时需要在此时设置视频下边内容区section_one 绝对定位；
+    * */
+    $("video")[0].oncanplay = function () {
+        $("#video_con").slideDown("slow");
+        $("#section_one").css("position", "absolute");
+        $("#section_one").css("top", "400px");
+    }
+
+
+    /* /!*7:图片显示cover,对移动到的图片进行设置显示cover*!/
+     $("#d1").hover(function () {
+         $("#d1 > div").slideDown("slow");
+     }, function () {
+         $("#d1 > div").slideUp("slow");
+     });
+ */
+    /*8：当从上滚动到“走进宾之郎”时，监控移动的位置，如果超过***就可以直接将section_one从下往上显示出来*/
+    $(window).scroll(function () {
+        console.log($(this).scrollTop());
+        if ($(this).scrollTop() >= 300) {
+            $("#section_one_content_img").animate({top: 150, opacity: '1'}).fadeIn("slow");
+        }
+    });
+
+
+    /*滚动到聚焦宾之郎时的动画*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 800) {
+            $("#section_two_top").animate({top: 0, opacity: '1'}).fadeIn("60000");
+            $("#section_two_eat").animate({top: 175, opacity: '1'}).fadeIn("60000");
+
+        }
+    });
+
+    /*黑色cover的覆盖动画效果*/
+    /*
+         $(".img_con").mouseenter(function () {
+         $(this).next(".cover").animate({top: 0}).fadeIn("slow");
+     });
+      $(".img_con").mouseleave(function(){
+          $(this).next(".cover").animate({top:"50%"}).fadeIn("slow");
+      });*/
+
+
+
+    /*第三板块*/
+    /*整体动画变化效果*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 1500) {
+            $("#section_three_center_first").animate({top: 0, opacity: '1'}).fadeIn("slow");
+            //$("#section_two_eat").animate({top: 175, opacity: '1'}).fadeIn("60000");
+        }
+        if ($(this).scrollTop() >= 1600) {
+            $("#three_left").animate({left: 0, opacity: '1'}).fadeIn("slow");
+            $("#three_right").animate({right: 0, opacity: '1'}).fadeIn("slow");
+        }
+    });
+
+    /*鼠标移动变化效果*/
+    /*使用mouseover会出现事件捕获现象，已保存博客*/
+    $(".three_right_content").mouseenter(function () {
+        $(this).find("span").css({"color": "#D4444B"});
+        $(this).find(".li_left_p").css({"color": "#D4444B"});
+        $(this).find("h3").css({"font-weight": "bold"});
+    });
+    $(".three_right_content").mouseleave(function () {
+        $(this).find("span").css({"color": "black"});
+        $(this).find(".li_left_p").css({"color": "black"});
+        $(this).find("h3").css({"font-weight": "normal"});
+    });
+
+
+    /*第四部分 配药小姑娘*/
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 2300) {
+            $("#section_four_content").animate({right: "150px"}).fadeIn("slow");
+        }
+    });
+
+
+</script>
+
+
+</html>
